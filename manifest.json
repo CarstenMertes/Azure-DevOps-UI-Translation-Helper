@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Azure DevOps UI Translation Helper",
+  "version": "0.0.4",
+  "description": "Translate and customize the Azure DevOps user interface to your preferred language.",
+  "default_locale": "en",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://dev.azure.com/*"],
+      "js": ["src/content/storage-manager.js", "src/content/translation.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://dev.azure.com/*"
+  ],
+  "options_page": "src/ui/options/options.html",
+  "permissions": ["storage", "sidePanel"],
+  "web_accessible_resources": [
+    {
+      "resources": ["data/azure-devops-translations.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "side_panel": {
+    "default_path": "src/ui/options/options.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'self';"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "Command+Shift+T"
+      },
+      "description": "Open Translation Panel in Side Panel"
+    }
+  },
+  "action": {
+    "default_title": "Modify Translations",
+    "default_icon": "icon.png"
+  }
+}

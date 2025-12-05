@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Azure DevOps Translation - Einstellungen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Kompaktes Layout im Side Panel */
+        body.compact {
+            padding: 10px;
+            max-width: 100%;
+        }
+        body.compact h1 {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+        body.compact h2 {
+            font-size: 1em;
+        }
+        body.compact p {
+            font-size: 0.9em;
+        }
+        h1 {
+            color: #0078d4;
+        }
+        .keyboard-hint {
+            background: #f0f0f0;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .translation-entry {
+            display: grid;
+            grid-template-columns: 1fr 1fr 50px;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #005a9e;
+        }
+        .remove-btn {
+            background: #d13438;
+            margin-right: 0;
+        }
+        .secondary-btn {
+            background: #6c757d;
+        }
+        .secondary-btn:hover {
+            background: #5a6268;
+        }
+        #status {
+            margin-top: 10px;
+            color: green;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-i18n="optionsTitle">Azure DevOps Translator - Settings</h1>
+
+    <div class="keyboard-hint">
+        💡 <strong data-i18n-html="keyboardHint">Tip: Press <kbd>Ctrl+Shift+T</kbd> or click the extension icon to open/close this panel</strong>
+        <a href="settings.html" style="float: right; color: #0078d4; text-decoration: none; font-weight: bold;">⚙️ Advanced Settings</a>
+    </div>
+
+    <!-- ✨ NEU: Sprachpaar-Auswahl -->
+    <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 4px;">
+        <label style="display: block; margin-bottom: 10px; font-weight: bold;">
+            <span data-i18n="languagePairLabel">Translation Direction:</span>
+        </label>
+        <select id="language-pair" style="padding: 8px; width: 100%; max-width: 300px; margin-bottom: 10px;">
+            <option value="">-- Custom / Benutzerdefiniert --</option>
+            <option value="en-de">English → Deutsch</option>
+            <option value="de-en">Deutsch → English</option>
+            <option value="en-es">English → Español</option>
+            <option value="en-fr">English → Français</option>
+            <option value="en-it">English → Italiano</option>
+        </select>
+        <button id="load-preset" class="secondary-btn" data-i18n="loadPresetsBtn">📦 Load Preset</button>
+    </div>
+
+    <h2 data-i18n="addTranslationsTitle">Add Your Own Translations</h2>
+    <p data-i18n="addTranslationsDesc">Add or edit your custom translations here.</p>
+
+    <!-- ✨ NEU: Info-Box mit Statistiken -->
+    <div id="stats-box" style="background: #e7f3ff; padding: 10px; border-radius: 4px; margin-bottom: 15px; display: none;">
+        <strong>📊 Statistics:</strong>
+        <span id="translation-count">0</span> translations loaded
+        <span id="storage-size" style="margin-left: 15px;"></span>
+    </div>
+
+    <div id="translations-container"></div>
+
+    <button id="add-translation" data-i18n="addTranslationBtn">+ Add New Translation</button>
+
+    <div class="button-group">
+        <button id="save" data-i18n="saveBtn">💾 Save</button>
+        <button id="reset" class="secondary-btn" data-i18n="resetBtn">🔄 Restore Defaults</button>
+    </div>
+
+    <!-- ✨ HIER: Import/Export Buttons -->
+    <div class="button-group">
+        <button id="export" class="secondary-btn" data-i18n="exportBtn">📥 Export (JSON)</button>
+        <button id="import" class="secondary-btn" data-i18n="importBtn">📤 Import (JSON)</button>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="../../content/storage-manager.js"></script>
+    <script src="../ui-mode.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

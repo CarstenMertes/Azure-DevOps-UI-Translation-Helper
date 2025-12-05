@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Azure DevOps Translation - Settings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .header p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+
+        .settings-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .settings-section h2 {
+            margin-top: 0;
+            color: #0078d4;
+            font-size: 1.3em;
+            border-bottom: 2px solid #e1e1e1;
+            padding-bottom: 10px;
+        }
+
+        .setting-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #0078d4;
+        }
+
+        .setting-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .setting-label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .setting-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .setting-control {
+            margin-top: 10px;
+        }
+
+        select, input[type="number"], input[type="text"] {
+            padding: 10px;
+            border: 2px solid #e1e1e1;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            border-color: #0078d4;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #005a9e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .secondary-btn {
+            background: #6c757d;
+        }
+
+        .secondary-btn:hover {
+            background: #5a6268;
+        }
+
+        .danger-btn {
+            background: #d13438;
+        }
+
+        .danger-btn:hover {
+            background: #a82629;
+        }
+
+        .status-message {
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-weight: 500;
+            display: none;
+        }
+
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status-message.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .status-message.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #0078d4;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .info-box strong {
+            color: #0078d4;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-left: 10px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #0078d4;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="options.html" class="back-link">← Back to Translations</a>
+
+    <div class="header">
+        <h1>⚙️ Advanced Settings</h1>
+        <p>Configure storage, performance, and behavior options</p>
+    </div>
+
+    <!-- Storage Settings -->
+    <div class="settings-section">
+        <h2>💾 Storage Configuration</h2>
+
+        <div class="setting-item">
+            <label class="setting-label">Storage Type</label>
+            <div class="setting-description">
+                Choose how your translations are stored. Each option has different capacity and sync capabilities.
+            </div>
+            <div class="setting-control">
+                <select id="storage-type">
+                    <option value="local">Local Storage (10 MB) - Recommended</option>
+                    <option value="sync">Cloud Sync (100 KB) - Multi-Device</option>
+                    <option value="indexeddb">IndexedDB (GB) - Maximum Capacity</option>
+                </select>
+            </div>
+            <div class="info-box">
+                <strong>Current Storage:</strong> <span id="current-storage-type">Loading...</span><br>
+                <strong>Capacity Used:</strong> <span id="storage-usage">Loading...</span>
+            </div>
+            <div class="button-group">
+                <button id="apply-storage" class="secondary-btn">🔄 Apply & Migrate</button>
+                <button id="test-storage" class="secondary-btn">🧪 Test Storage</button>
+            </div>
+            <div id="storage-status" class="status-message"></div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">Storage Statistics</label>
+            <div class="setting-description">
+                Overview of your current storage usage and capacity.
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Translations</div>
+                    <div class="stat-value" id="stat-count">0</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="stat-label">Storage Used</div>
+                    <div class="stat-value" id="stat-size">0 KB</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="stat-label">Capacity</div>
+                    <div class="stat-value" id="stat-percent">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Settings -->
+    <div class="settings-section">
+        <h2>⚡ Performance & Behavior</h2>
+
+        <div class="setting-item">
+            <label class="setting-label">Translation Update Interval</label>
+            <div class="setting-description">
+                How often the page checks for new content to translate (in milliseconds). Lower = faster updates, higher = better performance.
+            </div>
+            <div class="setting-control">
+                <input type="number" id="update-interval" min="500" max="10000" step="500" value="2000">
+                <span style="margin-left: 10px;">ms (default: 2000ms = 2 seconds)</span>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">
+                Enable Debug Mode
+                <label class="toggle-switch">
+                    <input type="checkbox" id="debug-mode">
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <div class="setting-description">
+                Shows detailed logging in the browser console for troubleshooting. Useful for developers or when reporting issues.
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">
+                Auto-translate Dynamic Content
+                <label class="toggle-switch">
+                    <input type="checkbox" id="auto-translate" checked>
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <div class="setting-description">
+                Automatically translate new content that appears on the page (e.g., modals, notifications). Recommended to keep enabled.
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel Settings -->
+    <div class="settings-section">
+        <h2>🎨 Panel & Interface</h2>
+
+        <div class="setting-item">
+            <label class="setting-label">Default Panel Position</label>
+            <div class="setting-description">
+                Where the settings panel opens by default when you press Ctrl+Shift+T.
+            </div>
+            <div class="setting-control">
+                <select id="panel-position">
+                    <option value="side">Side Panel (Recommended)</option>
+                    <option value="popup">Popup Window</option>
+                    <option value="tab">New Tab</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">Panel Theme</label>
+            <div class="setting-description">
+                Visual theme for the settings panel.
+            </div>
+            <div class="setting-control">
+                <select id="panel-theme">
+                    <option value="light">Light (Default)</option>
+                    <option value="dark">Dark</option>
+                    <option value="auto">Auto (Follow System)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Management -->
+    <div class="settings-section">
+        <h2>📦 Data Management</h2>
+
+        <div class="setting-item">
+            <label class="setting-label">
+                Auto-Backup
+                <label class="toggle-switch">
+                    <input type="checkbox" id="auto-backup">
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <div class="setting-description">
+                Automatically create daily backups of your translations to downloads folder.
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">Auto-Import Bundle</label>
+            <div class="setting-description">
+                Place an <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">azure-devops-translations.json</code> file in the extension directory for auto-import <strong>on first startup only</strong>!
+            </div>
+            <div class="info-box">
+                <strong>⚠️ Important:</strong> Auto-Import runs <strong>ONLY ONCE</strong> on first extension activation!<br><br>
+                <strong>How it works:</strong><br>
+                1. Create file <code style="background: #f0f0f0; padding: 2px 4px; border-radius: 2px;">azure-devops-translations.json</code><br>
+                2. Place in extension directory<br>
+                3. First extension startup → Auto-Import ✅<br>
+                4. Flag set → No more auto-imports<br>
+                5. To re-import: Click button below & reload page
+            </div>
+            <div class="button-group">
+                <button id="reset-auto-import" class="secondary-btn">🔄 Re-import Bundle File</button>
+            </div>
+            <div id="auto-import-status" class="status-message"></div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">Data Actions</label>
+            <div class="setting-description">
+                Manage your translation data and storage.
+            </div>
+            <div class="button-group">
+                <button id="clear-cache" class="secondary-btn">🗑️ Clear Cache</button>
+                <button id="reset-settings" class="danger-btn">⚠️ Reset All Settings</button>
+                <button id="export-settings" class="secondary-btn">📥 Export Settings</button>
+            </div>
+            <div id="data-status" class="status-message"></div>
+        </div>
+    </div>
+
+    <!-- Advanced -->
+    <div class="settings-section">
+        <h2>🔧 Advanced Options</h2>
+
+        <div class="setting-item">
+            <label class="setting-label">Maximum Processed Nodes Cache</label>
+            <div class="setting-description">
+                Maximum number of already-translated nodes to remember (prevents re-translation). Higher = more memory usage.
+            </div>
+            <div class="setting-control">
+                <input type="number" id="max-cache" min="100" max="10000" step="100" value="1000">
+                <span style="margin-left: 10px;">nodes</span>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">
+                Enable Experimental Features
+                <label class="toggle-switch">
+                    <input type="checkbox" id="experimental">
+                    <span class="slider"></span>
+                </label>
+            </label>
+            <div class="setting-description">
+                Enable experimental features that are still in testing. May be unstable.
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Button -->
+    <div class="button-group" style="justify-content: center; margin-top: 30px;">
+        <button id="save-all" style="font-size: 1.1em; padding: 15px 40px;">💾 Save All Settings</button>
+        <button id="cancel" class="secondary-btn" style="font-size: 1.1em; padding: 15px 40px;">❌ Cancel</button>
+    </div>
+
+    <div id="save-status" class="status-message" style="text-align: center; margin-top: 15px;"></div>
+
+    <script src="../../content/storage-manager.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

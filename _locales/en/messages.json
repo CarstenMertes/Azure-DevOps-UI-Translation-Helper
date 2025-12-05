@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Azure DevOps Translator",
+    "description": "Name of the extension"
+  },
+  "extDescription": {
+    "message": "Translate your Azure DevOps UI to your preferred language",
+    "description": "Description of the extension"
+  },
+  "optionsTitle": {
+    "message": "Azure DevOps Translator - Settings",
+    "description": "Title of the options page"
+  },
+  "keyboardHint": {
+    "message": "Tip: Press <kbd>Ctrl+Shift+T</kbd> or click the extension icon to open/close this panel",
+    "description": "Keyboard shortcut hint"
+  },
+  "addTranslationsTitle": {
+    "message": "Add Your Own Translations",
+    "description": "Section title"
+  },
+  "addTranslationsDesc": {
+    "message": "Add or edit your custom translations here.",
+    "description": "Section description"
+  },
+  "languagePairLabel": {
+    "message": "Translation Direction:",
+    "description": "Label for language pair selector"
+  },
+  "sourceLanguageLabel": {
+    "message": "Source Language",
+    "description": "Label for source language input"
+  },
+  "targetLanguageLabel": {
+    "message": "Target Language",
+    "description": "Label for target language input"
+  },
+  "addTranslationBtn": {
+    "message": "+ Add New Translation",
+    "description": "Button to add translation"
+  },
+  "saveBtn": {
+    "message": "💾 Save",
+    "description": "Save button"
+  },
+  "resetBtn": {
+    "message": "🔄 Restore Defaults",
+    "description": "Reset button"
+  },
+  "exportBtn": {
+    "message": "📥 Export (JSON)",
+    "description": "Export button"
+  },
+  "importBtn": {
+    "message": "📤 Import (JSON)",
+    "description": "Import button"
+  },
+  "savedMessage": {
+    "message": "✅ Saved! Reload Azure DevOps to see changes.",
+    "description": "Save success message"
+  },
+  "resetConfirm": {
+    "message": "Do you really want to discard all changes and restore default translations?",
+    "description": "Reset confirmation"
+  },
+  "resetSuccess": {
+    "message": "✅ Defaults restored!",
+    "description": "Reset success message"
+  },
+  "exportSuccess": {
+    "message": "✅ Translations exported!",
+    "description": "Export success message"
+  },
+  "importSuccess": {
+    "message": "✅ {count} translations imported!",
+    "description": "Import success message",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "15"
+      }
+    }
+  },
+  "importError": {
+    "message": "❌ Import error: {error}",
+    "description": "Import error message",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Invalid format"
+      }
+    }
+  },
+  "loadPresetsBtn": {
+    "message": "📦 Load Preset",
+    "description": "Load preset button"
+  }
+}

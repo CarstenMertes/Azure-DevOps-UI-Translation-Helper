@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Azure DevOps Übersetzer",
+    "description": "Name der Extension"
+  },
+  "extDescription": {
+    "message": "Übersetzen Sie Ihre Azure DevOps-Oberfläche in Ihre bevorzugte Sprache",
+    "description": "Beschreibung der Extension"
+  },
+  "optionsTitle": {
+    "message": "Azure DevOps Übersetzer - Einstellungen",
+    "description": "Titel der Optionsseite"
+  },
+  "keyboardHint": {
+    "message": "Tipp: Drücken Sie <kbd>Strg+Umschalt+T</kbd> oder klicken Sie auf das Extension-Icon, um dieses Panel zu öffnen/schließen",
+    "description": "Tastenkombination-Hinweis"
+  },
+  "addTranslationsTitle": {
+    "message": "Eigene Übersetzungen hinzufügen",
+    "description": "Abschnittstitel"
+  },
+  "addTranslationsDesc": {
+    "message": "Fügen Sie hier Ihre eigenen Übersetzungen hinzu oder bearbeiten Sie bestehende.",
+    "description": "Abschnittsbeschreibung"
+  },
+  "languagePairLabel": {
+    "message": "Übersetzungsrichtung:",
+    "description": "Label für Sprachpaar-Auswahl"
+  },
+  "sourceLanguageLabel": {
+    "message": "Quellsprache",
+    "description": "Label für Quellsprache"
+  },
+  "targetLanguageLabel": {
+    "message": "Zielsprache",
+    "description": "Label für Zielsprache"
+  },
+  "addTranslationBtn": {
+    "message": "+ Neue Übersetzung hinzufügen",
+    "description": "Button zum Hinzufügen"
+  },
+  "saveBtn": {
+    "message": "💾 Speichern",
+    "description": "Speichern-Button"
+  },
+  "resetBtn": {
+    "message": "🔄 Standard wiederherstellen",
+    "description": "Zurücksetzen-Button"
+  },
+  "exportBtn": {
+    "message": "📥 Exportieren (JSON)",
+    "description": "Export-Button"
+  },
+  "importBtn": {
+    "message": "📤 Importieren (JSON)",
+    "description": "Import-Button"
+  },
+  "savedMessage": {
+    "message": "✅ Gespeichert! Laden Sie Azure DevOps neu, um die Änderungen zu sehen.",
+    "description": "Erfolgsmeldung beim Speichern"
+  },
+  "resetConfirm": {
+    "message": "Möchten Sie wirklich alle Änderungen verwerfen und die Standardübersetzungen wiederherstellen?",
+    "description": "Bestätigung beim Zurücksetzen"
+  },
+  "resetSuccess": {
+    "message": "✅ Standard wiederhergestellt!",
+    "description": "Erfolgsmeldung beim Zurücksetzen"
+  },
+  "exportSuccess": {
+    "message": "✅ Übersetzungen exportiert!",
+    "description": "Erfolgsmeldung beim Export"
+  },
+  "importSuccess": {
+    "message": "✅ {count} Übersetzungen importiert!",
+    "description": "Erfolgsmeldung beim Import",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "15"
+      }
+    }
+  },
+  "importError": {
+    "message": "❌ Fehler beim Import: {error}",
+    "description": "Fehlermeldung beim Import",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Ungültiges Format"
+      }
+    }
+  },
+  "loadPresetsBtn": {
+    "message": "📦 Voreinstellung laden",
+    "description": "Voreinstellung-laden-Button"
+  }
+}
