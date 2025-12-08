@@ -1,10 +1,10 @@
 {
   "extName": {
-    "message": "Azure DevOps Translator",
+    "message": "Azure DevOps UI Translation Helper",
     "description": "Name of the extension"
   },
   "extDescription": {
-    "message": "Translate your Azure DevOps UI to your preferred language",
+    "message": "Translate and customize the Azure DevOps user interface to your preferred language.",
     "description": "Description of the extension"
   },
   "optionsTitle": {
@@ -94,5 +94,45 @@
   "loadPresetsBtn": {
     "message": "📦 Load Preset",
     "description": "Load preset button"
+  },
+  "openPanelCommand": {
+    "message": "Open Translation Panel in Side Panel",
+    "description": "Command description to open the translation panel"
+  },
+  "actionTitle": {
+    "message": "Modify Translations",
+    "description": "Title for the browser action button"
+  },
+  "languagePairCustom": {
+    "message": "-- Custom --",
+    "description": "Custom language pair option"
+  },
+  "languagePairEnDe": {
+    "message": "English → Deutsch",
+    "description": "English to German translation direction"
+  },
+  "languagePairDeEn": {
+    "message": "Deutsch → English",
+    "description": "German to English translation direction"
+  },
+  "languagePairEnEs": {
+    "message": "English → Español",
+    "description": "English to Spanish translation direction"
+  },
+  "languagePairEnFr": {
+    "message": "English → Français",
+    "description": "English to French translation direction"
+  },
+  "languagePairEnIt": {
+    "message": "English → Italiano",
+    "description": "English to Italian translation direction"
+  },
+  "languagePairEnNl": {
+    "message": "English → Nederlands",
+    "description": "English to Dutch translation direction"
+  },
+  "languagePairEnPt": {
+    "message": "English → Português",
+    "description": "English to Portuguese translation direction"
   }
 }

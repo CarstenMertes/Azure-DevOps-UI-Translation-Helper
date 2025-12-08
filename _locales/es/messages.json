@@ -1,0 +1,138 @@
+{
+  "extName": {
+    "message": "Asistente de traducción UI Azure DevOps",
+    "description": "Nombre de la extensión"
+  },
+  "extDescription": {
+    "message": "Traduzca y personalice la interfaz de usuario de Azure DevOps a su idioma preferido.",
+    "description": "Descripción de la extensión"
+  },
+  "optionsTitle": {
+    "message": "Asistente de traducción Azure DevOps - Configuración",
+    "description": "Título de la página de opciones"
+  },
+  "keyboardHint": {
+    "message": "Consejo: Presione <kbd>Ctrl+Mayús+T</kbd> o haga clic en el icono de la extensión para abrir/cerrar este panel",
+    "description": "Indicación de atajo de teclado"
+  },
+  "addTranslationsTitle": {
+    "message": "Agregar sus propias traducciones",
+    "description": "Título de sección"
+  },
+  "addTranslationsDesc": {
+    "message": "Agregue o edite sus traducciones personalizadas aquí.",
+    "description": "Descripción de sección"
+  },
+  "languagePairLabel": {
+    "message": "Dirección de traducción:",
+    "description": "Etiqueta para el selector de par de idiomas"
+  },
+  "sourceLanguageLabel": {
+    "message": "Idioma de origen",
+    "description": "Etiqueta para el idioma de origen"
+  },
+  "targetLanguageLabel": {
+    "message": "Idioma de destino",
+    "description": "Etiqueta para el idioma de destino"
+  },
+  "addTranslationBtn": {
+    "message": "+ Agregar nueva traducción",
+    "description": "Botón para agregar traducción"
+  },
+  "saveBtn": {
+    "message": "💾 Guardar",
+    "description": "Botón de guardar"
+  },
+  "resetBtn": {
+    "message": "🔄 Restaurar valores predeterminados",
+    "description": "Botón de restablecer"
+  },
+  "exportBtn": {
+    "message": "📥 Exportar (JSON)",
+    "description": "Botón de exportar"
+  },
+  "importBtn": {
+    "message": "📤 Importar (JSON)",
+    "description": "Botón de importar"
+  },
+  "savedMessage": {
+    "message": "✅ ¡Guardado! Recargue Azure DevOps para ver los cambios.",
+    "description": "Mensaje de éxito al guardar"
+  },
+  "resetConfirm": {
+    "message": "¿Realmente desea descartar todos los cambios y restaurar las traducciones predeterminadas?",
+    "description": "Confirmación de restablecimiento"
+  },
+  "resetSuccess": {
+    "message": "✅ ¡Valores predeterminados restaurados!",
+    "description": "Mensaje de éxito al restablecer"
+  },
+  "exportSuccess": {
+    "message": "✅ ¡Traducciones exportadas!",
+    "description": "Mensaje de éxito al exportar"
+  },
+  "importSuccess": {
+    "message": "✅ ¡{count} traducciones importadas!",
+    "description": "Mensaje de éxito al importar",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "15"
+      }
+    }
+  },
+  "importError": {
+    "message": "❌ Error de importación: {error}",
+    "description": "Mensaje de error de importación",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Formato inválido"
+      }
+    }
+  },
+  "loadPresetsBtn": {
+    "message": "📦 Cargar preajuste",
+    "description": "Botón de cargar preajuste"
+  },
+  "openPanelCommand": {
+    "message": "Abrir panel de traducción en el panel lateral",
+    "description": "Descripción del comando para abrir el panel de traducción"
+  },
+  "actionTitle": {
+    "message": "Modificar traducciones",
+    "description": "Título del botón de acción del navegador"
+  },
+  "languagePairCustom": {
+    "message": "-- Personalizado --",
+    "description": "Opción de par de idiomas personalizada"
+  },
+  "languagePairEnDe": {
+    "message": "English → Deutsch",
+    "description": "Dirección de traducción inglés a alemán"
+  },
+  "languagePairDeEn": {
+    "message": "Deutsch → English",
+    "description": "Dirección de traducción alemán a inglés"
+  },
+  "languagePairEnEs": {
+    "message": "English → Español",
+    "description": "Dirección de traducción inglés a español"
+  },
+  "languagePairEnFr": {
+    "message": "English → Français",
+    "description": "Dirección de traducción inglés a francés"
+  },
+  "languagePairEnIt": {
+    "message": "English → Italiano",
+    "description": "Dirección de traducción inglés a italiano"
+  },
+  "languagePairEnNl": {
+    "message": "English → Nederlands",
+    "description": "Dirección de traducción inglés a neerlandés"
+  },
+  "languagePairEnPt": {
+    "message": "English → Português",
+    "description": "Dirección de traducción inglés a portugués"
+  }
+}
