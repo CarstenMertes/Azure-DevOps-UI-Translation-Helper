@@ -1,10 +1,10 @@
 {
   "extName": {
-    "message": "Azure DevOps Übersetzer",
+    "message": "Azure DevOps UI-Übersetzungshelfer",
     "description": "Name der Extension"
   },
   "extDescription": {
-    "message": "Übersetzen Sie Ihre Azure DevOps-Oberfläche in Ihre bevorzugte Sprache",
+    "message": "Übersetzen und anpassen Sie die Azure DevOps-Benutzeroberfläche in Ihre bevorzugte Sprache.",
     "description": "Beschreibung der Extension"
   },
   "optionsTitle": {
@@ -94,5 +94,45 @@
   "loadPresetsBtn": {
     "message": "📦 Voreinstellung laden",
     "description": "Voreinstellung-laden-Button"
+  },
+  "openPanelCommand": {
+    "message": "Übersetzungs-Panel in Seitenleiste öffnen",
+    "description": "Befehlsbeschreibung zum Öffnen des Übersetzungs-Panels"
+  },
+  "actionTitle": {
+    "message": "Übersetzungen bearbeiten",
+    "description": "Titel für den Browser-Action-Button"
+  },
+  "languagePairCustom": {
+    "message": "-- Benutzerdefiniert --",
+    "description": "Benutzerdefinierte Sprachpaar-Option"
+  },
+  "languagePairEnDe": {
+    "message": "English → Deutsch",
+    "description": "Englisch nach Deutsch Übersetzungsrichtung"
+  },
+  "languagePairDeEn": {
+    "message": "Deutsch → English",
+    "description": "Deutsch nach Englisch Übersetzungsrichtung"
+  },
+  "languagePairEnEs": {
+    "message": "English → Español",
+    "description": "Englisch nach Spanisch Übersetzungsrichtung"
+  },
+  "languagePairEnFr": {
+    "message": "English → Français",
+    "description": "Englisch nach Französisch Übersetzungsrichtung"
+  },
+  "languagePairEnIt": {
+    "message": "English → Italiano",
+    "description": "Englisch nach Italienisch Übersetzungsrichtung"
+  },
+  "languagePairEnNl": {
+    "message": "English → Nederlands",
+    "description": "Englisch nach Niederländisch Übersetzungsrichtung"
+  },
+  "languagePairEnPt": {
+    "message": "English → Português",
+    "description": "Englisch nach Portugiesisch Übersetzungsrichtung"
   }
 }

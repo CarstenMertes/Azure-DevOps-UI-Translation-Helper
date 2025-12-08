@@ -33,6 +33,12 @@ function translateUI() {
     const key = el.getAttribute('data-i18n-html');
     el.innerHTML = chrome.i18n.getMessage(key) || el.innerHTML;
   });
+
+  // Translate option elements in select dropdowns
+  document.querySelectorAll('[data-i18n-option]').forEach(el => {
+    const key = el.getAttribute('data-i18n-option');
+    el.textContent = chrome.i18n.getMessage(key) || el.textContent;
+  });
 }
 
 // ✨ Load translations from storage (with Storage Manager)

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Azure DevOps UI Translation Helper",
+  "name": "__MSG_extName__",
   "version": "0.0.4",
-  "description": "Translate and customize the Azure DevOps user interface to your preferred language.",
+  "description": "__MSG_extDescription__",
   "default_locale": "en",
   "icons": {
     "128": "icon.png"
@@ -37,11 +37,11 @@
         "default": "Ctrl+Shift+T",
         "mac": "Command+Shift+T"
       },
-      "description": "Open Translation Panel in Side Panel"
+      "description": "__MSG_openPanelCommand__"
     }
   },
   "action": {
-    "default_title": "Modify Translations",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": "icon.png"
   }
 }

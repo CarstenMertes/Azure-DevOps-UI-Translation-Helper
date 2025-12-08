@@ -1,0 +1,138 @@
+{
+  "extName": {
+    "message": "Azure DevOps UI-vertaalassistent",
+    "description": "Naam van de extensie"
+  },
+  "extDescription": {
+    "message": "Vertaal en pas de Azure DevOps-gebruikersinterface aan naar uw voorkeurstaal.",
+    "description": "Beschrijving van de extensie"
+  },
+  "optionsTitle": {
+    "message": "Azure DevOps vertaalassistent - Instellingen",
+    "description": "Titel van de optiespagina"
+  },
+  "keyboardHint": {
+    "message": "Tip: Druk op <kbd>Ctrl+Shift+T</kbd> of klik op het extensiepictogram om dit paneel te openen/sluiten",
+    "description": "Sneltoetsindicatie"
+  },
+  "addTranslationsTitle": {
+    "message": "Voeg uw eigen vertalingen toe",
+    "description": "Sectietitel"
+  },
+  "addTranslationsDesc": {
+    "message": "Voeg hier uw aangepaste vertalingen toe of bewerk ze.",
+    "description": "Sectiebeschrijving"
+  },
+  "languagePairLabel": {
+    "message": "Vertaalrichting:",
+    "description": "Label voor taalpaar selector"
+  },
+  "sourceLanguageLabel": {
+    "message": "Brontaal",
+    "description": "Label voor brontaal"
+  },
+  "targetLanguageLabel": {
+    "message": "Doeltaal",
+    "description": "Label voor doeltaal"
+  },
+  "addTranslationBtn": {
+    "message": "+ Nieuwe vertaling toevoegen",
+    "description": "Knop om vertaling toe te voegen"
+  },
+  "saveBtn": {
+    "message": "💾 Opslaan",
+    "description": "Opslaanknop"
+  },
+  "resetBtn": {
+    "message": "🔄 Standaardinstellingen herstellen",
+    "description": "Resetknop"
+  },
+  "exportBtn": {
+    "message": "📥 Exporteren (JSON)",
+    "description": "Exportknop"
+  },
+  "importBtn": {
+    "message": "📤 Importeren (JSON)",
+    "description": "Importknop"
+  },
+  "savedMessage": {
+    "message": "✅ Opgeslagen! Herlaad Azure DevOps om de wijzigingen te zien.",
+    "description": "Succesbericht bij opslaan"
+  },
+  "resetConfirm": {
+    "message": "Wilt u echt alle wijzigingen verwijderen en de standaardvertalingen herstellen?",
+    "description": "Resetbevestiging"
+  },
+  "resetSuccess": {
+    "message": "✅ Standaardinstellingen hersteld!",
+    "description": "Succesbericht bij reset"
+  },
+  "exportSuccess": {
+    "message": "✅ Vertalingen geëxporteerd!",
+    "description": "Succesbericht bij export"
+  },
+  "importSuccess": {
+    "message": "✅ {count} vertalingen geïmporteerd!",
+    "description": "Succesbericht bij import",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "15"
+      }
+    }
+  },
+  "importError": {
+    "message": "❌ Importfout: {error}",
+    "description": "Foutmelding bij import",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Ongeldig formaat"
+      }
+    }
+  },
+  "loadPresetsBtn": {
+    "message": "📦 Voorinstelling laden",
+    "description": "Knop voorinstelling laden"
+  },
+  "openPanelCommand": {
+    "message": "Vertaalpaneel openen in zijpaneel",
+    "description": "Opdrachtbeschrijving om het vertaalpaneel te openen"
+  },
+  "actionTitle": {
+    "message": "Vertalingen wijzigen",
+    "description": "Titel van de browseractieknop"
+  },
+  "languagePairCustom": {
+    "message": "-- Aangepast --",
+    "description": "Aangepaste taalpaar optie"
+  },
+  "languagePairEnDe": {
+    "message": "English → Deutsch",
+    "description": "Vertaalrichting Engels naar Duits"
+  },
+  "languagePairDeEn": {
+    "message": "Deutsch → English",
+    "description": "Vertaalrichting Duits naar Engels"
+  },
+  "languagePairEnEs": {
+    "message": "English → Español",
+    "description": "Vertaalrichting Engels naar Spaans"
+  },
+  "languagePairEnFr": {
+    "message": "English → Français",
+    "description": "Vertaalrichting Engels naar Frans"
+  },
+  "languagePairEnIt": {
+    "message": "English → Italiano",
+    "description": "Vertaalrichting Engels naar Italiaans"
+  },
+  "languagePairEnNl": {
+    "message": "English → Nederlands",
+    "description": "Vertaalrichting Engels naar Nederlands"
+  },
+  "languagePairEnPt": {
+    "message": "English → Português",
+    "description": "Vertaalrichting Engels naar Portugees"
+  }
+}
